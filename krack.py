@@ -28,7 +28,7 @@ Usage:
 EXAMPLE = """{name} - Tool to test Key Reinstallation Attacks against an AP
 
 To test wheter an AP is vulnerable to a Key Reinstallation Attack against
-the Fast BSS Transition (FT) handshake, execute the following steps:
+the Fast BSS Transition (FT) handshake, {name} executes the following steps:
 
 1. Create a wpa_supplicant configuration file that can be used to connect
    to the network. A basic example is:
