@@ -4,7 +4,6 @@ the Fast BSS Transition (FT) handshake
 
 ## Install
 ```bash
-sudo apt-get install tcpdump python3-crypto ipython3
 pip install Scrapy
 ```
 
