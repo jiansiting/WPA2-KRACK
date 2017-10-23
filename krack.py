@@ -303,10 +303,10 @@ if __name__ == "__main__":
     if "--help" in sys.argv or "-h" in sys.argv:
         print USAGE.format(arg="")
         quit(1)
-    if "--example" in sys.argv or "-e" in sys.argv:
+    elif "--example" in sys.argv or "-e" in sys.argv:
         print EXAMPLE.format(name=sys.argv[0])
         quit(1)
-    if "--interactive" in sys.argv or "-i" in sys.argv:
+    elif "--interactive" in sys.argv or "-i" in sys.argv:
         conf = open('network.conf', 'w')
         ssid, passwd = None, None
         while not ssid:
@@ -320,4 +320,7 @@ if __name__ == "__main__":
         atexit.register(cleanup)
         attack.run()
     else:
-        print USAGE.format(arg="Unknown Argument: " + sys.argv[1])
+        if sys.argv[1:]:
+            print USAGE.format(arg="Unknown Argument: " + str(sys.argv[1:]))
+        else:
+            print USAGE.format(arg="")
